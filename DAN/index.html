@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARANATHA Kitchen</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:black;
+    color:white;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:20px;
+}
+header h1{
+    color:gold;
+    font-size:32px;
+}
+
+/* ABOUT SECTION */
+.about{
+    padding:20px;
+    text-align:center;
+}
+.about h2{
+    color:gold;
+}
+.about p{
+    color:white;
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+/* MENU SECTION */
+.menu{
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:20px;
+}
+
+.food-card{
+    background:#111;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.food-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.food-card h3{
+    color:gold;
+}
+
+/* UPLOAD */
+.upload{
+    text-align:center;
+    padding:20px;
+}
+
+/* FORM */
+.form-section{
+    padding:20px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:gold;
+    border:none;
+    padding:10px;
+    width:100%;
+    cursor:pointer;
+}
+
+/* SOCIALS */
+.socials{
+    text-align:center;
+    padding:20px;
+}
+
+.socials a{
+    margin:0 10px;
+    text-decoration:none;
+}
+
+.socials i{
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+/* MAP */
+.map{
+    padding:20px;
+}
+
+iframe{
+    width:100%;
+    height:300px;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MARANATHA Kitchen</h1>
+    <p>Delicious Meals Everyday</p>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+    <h2>About MARANATHA Kitchen</h2>
+    <p>
+        We make very spicy, delicious, and exclusive meals delivered around Abuja. 
+        We cook one of the most fantastic foods you can think of without getting tired, 
+        and we deliver fast and on time. So don't hesitate to patronize MARANATHA Kitchen business!
+    </p>
+<!-- HUMAN IMAGE UPLOAD -->
+<div style="text-align:center; margin-top:40px;">
+
+<h3 style="color:#e63946;">Add Human Image</h3>
+
+<input type="file" id="humanImageInput" accept="image/*"
+style="padding:10px; background:#111; color:white; border:1px solid #e63946; border-radius:6px;">
+
+<div id="humanImagePreview" style="margin-top:20px;"></div>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+
+<!-- TO ADD YOUR OWN IMAGE: Replace the src="" with your image URL or local path -->
+<div class="food-card">
+    <img src="images/jollofrice.jpg" alt="Jollof Rice">
+    <h3>Jollof Rice</h3>
+    <p>₦2000</p>
+</div>
+
+<div class="food-card">
+    <img src="images/spaghetti.jpg" alt="Spaghetti">
+    <h3>Spaghetti</h3>
+    <p>₦1500</p>
+</div>
+
+<div class="food-card">
+    <img src="images/ricebeans.jpg" alt="Rice & Beans">
+    <h3>Rice & Beans</h3>
+    <p>₦1200</p>
+</div>
+
+<div class="food-card">
+    <img src="images/chipsegg.jpg" alt="Chips & Egg">
+    <h3>Chips & Egg</h3>
+    <p>₦1800</p>
+</div>
+
+<div class="food-card">
+    <img src="images/beansporridge.jpg" alt="Beans Porridge">
+    <h3>Beans Porridge</h3>
+    <p>₦1300</p>
+</div>
+
+<div class="food-card">
+    <img src="images/ricestew.jpg" alt="Rice & Stew">
+    <h3>Rice & Stew</h3>
+    <p>₦1700</p>
+</div>
+
+<div class="food-card">
+    <img src="images/plantain.jpg" alt="Plantain">
+    <h3>Plantain</h3>
+    <p>₦800</p>
+</div>
+
+<div class="food-card">
+    <img src="images/plantainegg.jpg" alt="Plantain & Egg">
+    <h3>Plantain & Egg</h3>
+    <p>₦1600</p>
+</div>
+
+<div class="food-card">
+    <img src="images/yamballs.jpg" alt="Yam Balls">
+    <h3>Yam Balls</h3>
+    <p>₦1400</p>
+</div>
+
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+    <h2 style="color:gold;">Customer Inquiry</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <textarea placeholder="Address / Message"></textarea>
+        <button type="submit">Send Inquiry</button>
+    </form>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="socials">
+    <h2 style="color:gold;">Follow & Order</h2>
+    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/2348036023262" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="map">
+    <h2 style="color:gold;">Our Location</h2>
+    <iframe src="https://maps.google.com/maps?q=Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<script>
+window.onload=function(){
+document.getElementById("loader").style.display="none";
+}
+
+// IMAGE UPLOAD + DISPLAY
+document.getElementById("humanImageInput").addEventListener("change", function(event){
+const file = event.target.files[0];
+
+if(file){
+const reader = new FileReader();
+
+reader.onload = function(e){
+const img = document.createElement("img");
+img.src = e.target.result;
+
+img.style.width = "280px";
+img.style.borderRadius = "15px";
+img.style.marginTop = "15px";
+img.style.boxShadow = "0 0 25px rgba(255,255,255,0.2)";
+
+const preview = document.getElementById("humanImagePreview");
+preview.innerHTML = ""; // replace old image
+preview.appendChild(img);
+};
+
+reader.readAsDataURL(file);
+}
+});
+</script>
+
+</body>
+</html>
